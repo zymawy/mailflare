@@ -1,0 +1,48 @@
+{
+  "name": "mailflare",
+  "version": "0.1.0",
+  "description": "Free professional domain email in minutes. Cloudflare Email Routing + Gmail/Resend SMTP — no Google Workspace needed.",
+  "main": "src/index.js",
+  "bin": {
+    "mailflare": "./bin/mailflare.js"
+  },
+  "scripts": {
+    "start": "node bin/mailflare.js",
+    "dev": "node --watch bin/mailflare.js",
+    "lint": "eslint src bin"
+  },
+  "keywords": [
+    "email",
+    "cloudflare",
+    "domain-email",
+    "google-workspace-alternative",
+    "free-email",
+    "smtp",
+    "email-routing",
+    "custom-domain-email",
+    "gmail",
+    "resend"
+  ],
+  "author": "Hamza Mohammad <root@mouthanna.io>",
+  "license": "MIT",
+  "homepage": "https://github.com/zymawy/mailflare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zymawy/mailflare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zymawy/mailflare/issues"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "inquirer": "^10.1.8",
+    "nodemailer": "^6.9.14",
+    "ora": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module"
+}
