@@ -1,15 +1,19 @@
 {
-  "name": "mailflare",
+  "name": "@zymawy/mailflare",
   "version": "0.1.0",
   "description": "Free professional domain email in minutes. Cloudflare Email Routing + Gmail/Resend SMTP — no Google Workspace needed.",
   "main": "src/index.js",
   "bin": {
     "mailflare": "./bin/mailflare.js"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "start": "node bin/mailflare.js",
     "dev": "node --watch bin/mailflare.js",
-    "lint": "eslint src bin"
+    "lint": "eslint src bin",
+    "prepare": "node -e \"try{require('fs').chmodSync('bin/mailflare.js','755')}catch(e){}\""
   },
   "keywords": [
     "email",

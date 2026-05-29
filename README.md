@@ -3,7 +3,7 @@
 **Free professional domain email in 5 minutes. No Google Workspace. No monthly fees.**
 
 ```bash
-npx mailflare setup
+npx @zymawy/mailflare setup
 ```
 
 ---
@@ -48,13 +48,13 @@ from Gmail      │  Resend.com (free)  │
 
 ### Option A — Interactive (recommended for first time)
 ```bash
-npx mailflare setup
+npx @zymawy/mailflare setup
 # Walks you through everything step by step
 ```
 
 ### Option B — Direct with flags
 ```bash
-npx mailflare setup \
+npx @zymawy/mailflare setup \
   --domain mouthanna.io \
   --address root \
   --forward me@gmail.com
@@ -64,7 +64,7 @@ npx mailflare setup \
 ```bash
 CLOUDFLARE_API_TOKEN=your_cf_token \
 RESEND_API_KEY=re_your_key \
-npx mailflare setup \
+npx @zymawy/mailflare setup \
   --domain mouthanna.io \
   --address root \
   --forward me@gmail.com \
@@ -88,7 +88,7 @@ npx mailflare setup \
 
 ```bash
 # Set up email for a domain
-npx mailflare setup --domain example.com --forward me@gmail.com --address hello
+npx @zymawy/mailflare setup --domain example.com --forward me@gmail.com --address hello
 
 # List all email routes
 npx mailflare list --domain example.com
@@ -179,13 +179,13 @@ Run setup multiple times for different addresses:
 
 ```bash
 # hello@mouthanna.io
-npx mailflare setup --domain mouthanna.io --address hello --forward me@gmail.com
+npx @zymawy/mailflare setup --domain mouthanna.io --address hello --forward me@gmail.com
 
 # support@mouthanna.io  
-npx mailflare setup --domain mouthanna.io --address support --forward support-team@gmail.com
+npx @zymawy/mailflare setup --domain mouthanna.io --address support --forward support-team@gmail.com
 
 # *@mouthanna.io (catch-all — coming soon)
-npx mailflare setup --domain mouthanna.io --catch-all --forward me@gmail.com
+npx @zymawy/mailflare setup --domain mouthanna.io --catch-all --forward me@gmail.com
 ```
 
 ---
@@ -195,9 +195,9 @@ npx mailflare setup --domain mouthanna.io --catch-all --forward me@gmail.com
 Works with any domain you have on Cloudflare:
 
 ```bash
-npx mailflare setup --domain myproject.com --address hello --forward me@gmail.com
-npx mailflare setup --domain mysaas.io --address support --forward me@gmail.com
-npx mailflare setup --domain freelance.dev --address hamza --forward me@gmail.com
+npx @zymawy/mailflare setup --domain myproject.com --address hello --forward me@gmail.com
+npx @zymawy/mailflare setup --domain mysaas.io --address support --forward me@gmail.com
+npx @zymawy/mailflare setup --domain freelance.dev --address hamza --forward me@gmail.com
 ```
 
 ---
