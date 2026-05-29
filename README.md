@@ -3,7 +3,12 @@
 **Free professional domain email in 5 minutes. No Google Workspace. No monthly fees.**
 
 ```bash
-npx @zymawy/mailflare setup
+# Run instantly — no install needed
+npx github:zymawy/mailflare setup
+
+# Or install globally
+npm install -g github:zymawy/mailflare
+mailflare setup
 ```
 
 ---
@@ -48,13 +53,13 @@ from Gmail      │  Resend.com (free)  │
 
 ### Option A — Interactive (recommended for first time)
 ```bash
-npx @zymawy/mailflare setup
+npx github:zymawy/mailflare setup
 # Walks you through everything step by step
 ```
 
 ### Option B — Direct with flags
 ```bash
-npx @zymawy/mailflare setup \
+npx github:zymawy/mailflare setup \
   --domain mouthanna.io \
   --address root \
   --forward me@gmail.com
@@ -64,7 +69,7 @@ npx @zymawy/mailflare setup \
 ```bash
 CLOUDFLARE_API_TOKEN=your_cf_token \
 RESEND_API_KEY=re_your_key \
-npx @zymawy/mailflare setup \
+npx github:zymawy/mailflare setup \
   --domain mouthanna.io \
   --address root \
   --forward me@gmail.com \
@@ -88,16 +93,16 @@ npx @zymawy/mailflare setup \
 
 ```bash
 # Set up email for a domain
-npx @zymawy/mailflare setup --domain example.com --forward me@gmail.com --address hello
+npx github:zymawy/mailflare setup --domain example.com --forward me@gmail.com --address hello
 
 # List all email routes
-npx mailflare list --domain example.com
+npx github:zymawy/mailflare list --domain example.com
 
 # Send a test email to verify setup
-npx mailflare verify --address hello@example.com --to me@gmail.com
+npx github:zymawy/mailflare verify --address hello@example.com --to me@gmail.com
 
 # Remove an email route
-npx mailflare remove --address hello@example.com
+npx github:zymawy/mailflare remove --address hello@example.com
 ```
 
 ---
@@ -179,13 +184,13 @@ Run setup multiple times for different addresses:
 
 ```bash
 # hello@mouthanna.io
-npx @zymawy/mailflare setup --domain mouthanna.io --address hello --forward me@gmail.com
+npx github:zymawy/mailflare setup --domain mouthanna.io --address hello --forward me@gmail.com
 
 # support@mouthanna.io  
-npx @zymawy/mailflare setup --domain mouthanna.io --address support --forward support-team@gmail.com
+npx github:zymawy/mailflare setup --domain mouthanna.io --address support --forward support-team@gmail.com
 
 # *@mouthanna.io (catch-all — coming soon)
-npx @zymawy/mailflare setup --domain mouthanna.io --catch-all --forward me@gmail.com
+npx github:zymawy/mailflare setup --domain mouthanna.io --catch-all --forward me@gmail.com
 ```
 
 ---
@@ -195,9 +200,9 @@ npx @zymawy/mailflare setup --domain mouthanna.io --catch-all --forward me@gmail
 Works with any domain you have on Cloudflare:
 
 ```bash
-npx @zymawy/mailflare setup --domain myproject.com --address hello --forward me@gmail.com
-npx @zymawy/mailflare setup --domain mysaas.io --address support --forward me@gmail.com
-npx @zymawy/mailflare setup --domain freelance.dev --address hamza --forward me@gmail.com
+npx github:zymawy/mailflare setup --domain myproject.com --address hello --forward me@gmail.com
+npx github:zymawy/mailflare setup --domain mysaas.io --address support --forward me@gmail.com
+npx github:zymawy/mailflare setup --domain freelance.dev --address hamza --forward me@gmail.com
 ```
 
 ---
@@ -220,9 +225,22 @@ You've already set up this email address. Run `mailflare list` to see existing r
 
 ---
 
-## Local Development
+## Installation Options
 
 ```bash
+# Option 1: Run without installing (recommended)
+npx github:zymawy/mailflare setup
+
+# Option 2: Install globally from GitHub
+npm install -g github:zymawy/mailflare
+mailflare setup
+
+# Option 3: Install via GitHub Packages (requires GitHub auth)
+echo "@zymawy:registry=https://npm.pkg.github.com" >> ~/.npmrc
+npm install -g @zymawy/mailflare
+mailflare setup
+
+# Option 4: Clone and run locally
 git clone https://github.com/zymawy/mailflare
 cd mailflare
 npm install
